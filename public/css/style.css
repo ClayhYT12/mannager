@@ -1,0 +1,882 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+.clear{
+	clear: both;
+}
+
+body{
+	overflow-y: hidden;
+	background-color: #F1F1F1;
+}
+
+header{
+	width: 85vw;
+	height: 60px;
+	background-color: white;
+	float: right;
+	border-bottom: 1px solid #ccc;	
+}
+
+.menu{
+	float: right;
+	margin: 12px 18px;
+	vertical-align: middle;
+}
+
+.notifications{
+	display: inline-block;
+}
+
+.notifications a{
+	color: #ccc;
+	position: relative;
+	bottom: 8px;
+}
+
+.mensagens{
+	display: inline-block;
+	padding-left: 13px;
+}
+
+.mensagens a{
+	color: #ccc;
+	position: relative;
+	bottom: 8px;
+	padding-right: 18px;
+}
+
+.logo{
+	display: inline-block;
+}
+
+
+.logo h1{
+	display: inline-block;
+	font-size: 14px;
+	color: #BCBCBC;
+	position: relative;
+	bottom: 8px;
+	padding-left: 18px;
+	border-left: 1px solid #ccc;
+	padding-top: 6px;
+	padding-bottom: 6px;  
+}
+
+.logo img{
+	margin-left: 10px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+section.navbar-vertical{
+	width: 15%;
+	height: 100vh;
+	float: left;
+	background-color: #117DDA;
+}
+
+.service-logo{
+	width: 90%;
+	margin-left: 6px;
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+}
+
+.service-logo img{
+	width: 32px;
+	height: 32px;
+	margin: 12px;
+	margin-left: 15px;
+	float: left;
+}
+
+.service-wraper{
+	padding-top: 14px;
+	padding-right: 15px;
+}
+
+.service-wraper h1{
+	float: right;
+	letter-spacing: 1px;
+	margin-right: 14px;
+	font-size: 12px;
+	color: white;
+	text-transform: uppercase;
+}
+
+.service-wraper span{
+	float: right;
+	color: white;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+.clientes-mobile{
+	padding: 20px;
+	display: none;
+}
+
+.clientes-adm-mobile{
+	padding: 20px;
+	display: none;
+}
+
+.clientes{
+	padding: 20px;
+}
+
+.clientes a{
+	color: white;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.clientes i{
+	padding-right: 5px; 
+}
+
+
+.clientes-adm{
+	padding: 20px;
+	
+}
+
+.clientes-adm a{
+	color: white;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.clientes-adm i{
+	padding-right: 5px;
+}
+
+.line-adm{
+	width: 90%;
+	margin-left: 6px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+.interface{
+	padding: 10px 20px;
+}
+
+.interface span{
+	color: #ccc;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.arrow-left{
+	text-align: center;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+section.painel{
+	width: 85%;
+	position: relative;
+	left: 15%;
+	top: 60px;
+	height: calc(100vh - 60px);
+}
+
+.painel-wraper{
+	width: 60%;
+	height: calc(100vh - 60px);
+	margin: 0 auto;
+}
+
+.title-painel{
+	width: 100%;
+	height:60px;
+}
+
+.title-painel h1{
+	position: relative;
+	bottom: 40px;
+	font-weight: 400;
+}
+
+.new-client button{
+	width: 93px;
+	height: 34px;
+	background-color: #16AA09;
+	color: white;
+	border: 0;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.option-plus{
+	margin-top: 15px;
+	width: 100%;
+	display: inline-block;
+}
+
+.show-option{
+	float: left;
+}
+
+.show-option input{
+	width: 70px;
+	height: 24px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+
+.show-option input[placeholder]{
+	padding-left: 10px;
+}
+
+.show-option span{
+	font-size: 14px;
+}
+
+.show-option input:focus{
+	outline: 0;
+}
+
+.search{
+	float: right;
+}
+
+.search span{
+	font-size: 14px;
+}
+
+.search input{
+	width: 140px;
+	height: 24px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+
+.search input[placeholder]{
+	padding-left: 10px;
+}
+
+.search input:focus{
+	outline: 0;
+}
+
+.edit-info{
+	float: left;
+	margin-top: 10px;
+	width: 100%;
+	height: 350px;
+	margin-bottom: 10px;
+	border: 2px solid #ccc;
+}
+
+.register{
+	margin-top: 10px;
+}
+
+.register span{
+	font-size: 12px;
+}
+
+.back-next{
+	float: right;
+}
+
+.back{
+	display: inline-block;
+}
+
+.back button{
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	width: 80px;
+	height: 24px;
+	cursor: pointer;
+	background-color: white;
+}
+
+.number-page{
+	display: inline-block;
+}
+
+.number-page button{
+	margin-left: -5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	color: white;
+	background-color: #117DDA;
+}
+
+.number-page2{
+	display: inline-block;
+}
+
+.number-page2 button{
+	margin-left: -5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	color: #117DDA;
+	background-color: white;
+}
+
+.next{
+	display: inline-block;
+}
+
+.next button{
+	margin-left: -5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	width: 80px;
+	height: 24px;
+	cursor: pointer;
+	color: #117DDA;
+	background-color: white;
+}
+
+section.client-user{
+	display: none;
+	width: 33%;
+	height: 90vh;
+	position: relative;
+	bottom: 530px;
+	left: 524px;
+	background-color: white;
+	border: 2px solid #ccc;
+}
+
+.recent-client{
+	width: 100%;	
+}
+
+.title-recent{
+	width: 100%;
+	height: 52px;
+	position: relative;
+	bottom: 59px;	
+	background-color: #16AA09;
+	width: 100%;
+	padding: 10px;
+	padding-top: 15px;
+	display: inline-block;
+}
+
+.title-recent h1{
+	float: left;
+	color: white;
+	font-size: 18px;
+	font-weight: 400;
+	float: left;
+}
+
+.title-recent button{
+	border: 0;
+	background-color: #16AA09;
+	font-weight: bold;
+	float: right;
+	cursor: pointer;
+}
+
+.email-client{
+	position: relative;
+	bottom: 60px;
+	padding: 10px;
+}
+
+.email-client span{
+	width: 100%;
+	font-size: 14px;
+	display: inline-block;
+}
+
+.email-client input{
+	width: 100%;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 7px;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.email-client input[placeholder]{
+	padding-left: 10px;
+}
+
+.email-client input:focus{
+	outline: 0;
+}
+
+.senha-client{
+	position: relative;
+	bottom: 65px;
+	padding: 10px;
+}
+
+.senha-client span{
+	width: 100%;
+	font-size: 14px;
+	display: inline-block;
+}
+
+.senha-client input{
+	width: 100%;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 7px;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.senha-client input[placeholder]{
+	padding-left: 10px;
+}
+
+.senha-client input:focus{
+	outline: 0;
+}
+
+.software-client{
+	position: relative;
+	bottom: 68px;
+	padding: 10px;
+}
+
+.software-client span{
+	width: 100%;
+	font-size: 14px;
+	display: inline-block;
+}
+
+.software-client select{
+	width: 100%;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 7px;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.software-client select:focus{
+	outline: 0;
+}
+
+.software-client select[placeholder]{
+	padding-left: 8px;
+}
+
+.validade-client{
+	position: relative;
+	bottom: 70px;
+	padding: 10px;
+}
+
+.validade-client span{
+	font-size: 14px;
+	padding-right: 20px; 
+}
+
+.validade-client input{
+	width: 80%;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 7px;
+	border-radius: 4px;
+}
+
+.validade-client input:focus{
+	outline: 0;
+}
+
+.validade-client input[placeholder]{
+	padding-left: 10px;
+}
+
+.codigo-client{
+	position: relative;
+	bottom: 80px;
+	padding: 10px;
+}
+
+.codigo-client span{
+	width: 100%;
+	font-size: 14px;
+	display: inline-block;
+}
+
+.codigo-client input{
+	width: 100%;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 7px;
+	border-radius: 4px;
+}
+
+.codigo-client input:focus{
+	outline: 0;
+}
+
+.codigo-client input[placeholder]{
+	padding-left: 10px;
+}
+
+.revenda-client{
+	position: relative;
+	bottom: 90px;
+	padding: 10px;
+}
+
+.revenda-client span{
+	width: 100%;
+	font-size: 14px;
+	display: inline-block;
+}
+
+.revenda-client input{
+	width: 100%;
+	display: inline-block;
+	height: 30px;
+	border: 1px solid #A9A9A9;
+	background-color: #DDDDDD;
+	margin-top: 7px;
+	border-radius: 4px;
+}
+
+.revenda-client input:focus{
+	outline: 0;
+}
+
+.revenda-client input[placeholder]{
+	padding-left: 10px;
+}
+
+
+.final{
+	float: right;
+	position: relative;
+	bottom: 65px;
+	padding: 12px;
+}
+
+.cancel{
+	display: inline-block;
+}
+
+.cancel button{
+	width: 85px;
+	height: 30px;
+	border: 0;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+
+.licence{
+	display: inline-block;
+}
+
+.licence button{
+	margin-left: 3px;
+	cursor: pointer;
+	width: 95px;
+	height: 30px;
+	color: white;
+	border-radius: 4px;
+	background-color: #828282;
+	border: 0;
+}
+
+
+@media screen and (max-width: 914px){
+	.service-logo img{
+		margin-left: 37px;
+	}
+
+	.service-wraper h1{
+		display: none;
+	}
+
+	.service-wraper span{
+		display: none;
+	}
+
+	.painel-wraper{
+		position: relative;
+		right: 60px;
+	}
+
+	.clientes{
+		display: none;
+	}
+
+	.clientes-adm{
+		display: none;
+	}
+
+	.clientes-mobile{
+		margin-left: 25px;
+		display: block;
+	}
+
+	.clientes-adm-mobile{
+		margin-left: 25px;
+		display: block;
+	}
+
+	.clientes-mobile a{
+		color: white;
+	}
+
+	.clientes-adm-mobile a{
+		color: white;
+	}
+
+	.back-next{
+		width: 100%;
+		display: inline-block;
+		margin-top: 15px;
+	}
+}
+
+@media screen and (max-width: 912px){
+	section.client-user{
+		width: 50%;
+		height: auto;
+		position: relative;
+		bottom: 610px;
+		left: 200px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	section.client-user{
+		width: 60%;
+		height: auto;
+		position: relative;
+		bottom: 610px;
+		left: 150px;
+	}
+}
+
+@media screen and (max-width: 506px){
+	section.client-user{
+		width: 70%;
+		height: auto;
+		position: relative;
+		bottom: 610px;
+		left: 115px;
+	}
+}
+
+@media screen and (max-width: 415px){
+	section.client-user{
+		width: 80%;
+		height: auto;
+		position: relative;
+		bottom: 610px;
+		left: 60px;
+	}
+}
+
+@media screen and (max-width: 376px){
+	section.client-user{
+		width: 80%;
+		height: auto;
+		position: relative;
+		bottom: 570px;
+		left: 60px;
+	}
+}
+
+
+@media screen and (max-width: 560px){
+	.service-logo img{
+		margin-left: 13px;
+	}
+
+	.service-wraper h1{
+		display: none;
+	}
+
+	.service-wraper span{
+		display: none;
+	}
+
+	.painel-wraper{
+		position: relative;
+		right: 60px;
+	}
+
+	.clientes{
+		display: none;
+	}
+
+	.clientes-adm{
+		display: none;
+	}
+
+	.clientes-mobile{
+		margin-left: 2px;
+		display: block;
+	}
+
+	.clientes-adm-mobile{
+		margin-left: 2px;
+		display: block;
+	}
+
+	.clientes-mobile a{
+		color: white;
+	}
+
+	.clientes-adm-mobile a{
+		color: white;
+	}
+
+	.interface{
+		margin-left: -12px;
+	}
+
+	.interface span{
+		font-size: 12px;
+	}
+
+
+	.edit-info{
+		width: 400px;
+		height: 420px;
+	}
+
+	.option-plus{
+		width: 124%;
+		display: inline-block;
+	}
+
+	.show-option span{
+		font-size: 11px;
+	}
+
+	.search input{
+		width: 120px;
+	}
+
+	.search span{
+		font-size: 11px;
+	}
+}
+
+@media screen and (max-width: 415px){
+	.service-logo img{
+		margin-left: 5px;
+	}
+
+	.clientes{
+		display: none;
+	}
+
+	.clientes-adm{
+		display: none;
+	}
+
+	.clientes-mobile{
+		display: block;
+	}
+
+	.clientes-adm-mobile{
+		display: block;
+	}
+
+	.clientes-mobile a{
+		color: white;
+	}
+
+	.clientes-adm-mobile a{
+		color: white;
+	}
+
+	.interface{
+		margin-left: -14px;
+	}
+
+	.interface span{
+		font-size: 9px;
+	}
+
+
+	.title-painel{
+		margin-left: 23px;
+	}
+
+	.new-client{
+		margin-left: 23px;
+	}
+
+	.option-plus{
+		margin-left: 23px;
+	}
+
+	.show-option{
+		width: 100%;
+		display: inline-block;
+	}
+
+	.search{
+		width: 100%;
+		margin-top: 5px;
+		display: inline-block;
+	}
+
+	.search input{
+		width: 200px;
+	}
+
+	.edit-info{
+		width: 300px;
+		margin-left: 23px;
+		height: 350px;
+	}
+
+	.back-next{
+		display: inline-block;
+		width: 100%;
+		margin-top: 5px;
+	}
+
+	.register{
+		margin-left: 23px;
+	}
+
+	.register span{
+		width: 100%;
+		display: inline-block;
+		font-size: 10px;
+	}
+
+	.back button{
+		font-size: 12px;
+		width: 60px;
+	}
+
+	.next button{
+		font-size: 12px;
+		width: 60px;
+	}
+	
+}
+
+@media screen and (max-width: 390px){
+	.title-painel h1{
+		font-size: 19px;
+	}
+}
