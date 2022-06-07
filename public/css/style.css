@@ -4,6 +4,24 @@
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
 }
+table{
+	width: 100%;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+	padding: 3px;
+	text-align: center;
+}
 
 .clear{
 	clear: both;
