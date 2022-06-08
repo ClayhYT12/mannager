@@ -5,7 +5,10 @@
 	font-family: 'Roboto', sans-serif;
 }
 table{
+	text-align: center;
 	width: 100%;
+	font-size: 13px;
+	border-collapse: collapse;
 }
 tr {
     display: table-row;
@@ -21,6 +24,39 @@ th {
     text-align: -internal-center;
 	padding: 3px;
 	text-align: center;
+}
+
+.bold-td{
+	font-weight: bold;
+	color: #424242;
+}
+
+.bold-tr{
+	font-weight: 400;
+	color: #727272;
+	background-color: #EEEEEE;
+}
+
+.edit{
+	cursor: pointer;
+	border: 0;
+	color: white;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	padding: 3px;
+	font-size: 11px;
+	background-color: #117DDA;
+}
+
+.delete{
+	cursor: pointer;
+	border: 0;
+	padding: 3px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	font-size: 11px;
+	color: white;
+	background-color: #D81D1D;
 }
 
 .clear{
@@ -365,6 +401,7 @@ section.painel{
 }
 
 section.client-user{
+	display: none;
 	width: 33%;
 	height: 90vh;
 	position: relative;
