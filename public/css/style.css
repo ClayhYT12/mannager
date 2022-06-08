@@ -9,12 +9,17 @@ table{
 	width: 100%;
 	font-size: 13px;
 	border-collapse: collapse;
+	border: 0.5px solid black;
 }
 tr {
     display: table-row;
     vertical-align: inherit;
     border-color: inherit;
 
+}
+
+td{
+	border: 0.5px solid black;
 }
 
 th {
