@@ -365,7 +365,6 @@ section.painel{
 }
 
 section.client-user{
-	display: none;
 	width: 33%;
 	height: 90vh;
 	position: relative;
