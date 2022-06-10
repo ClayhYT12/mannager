@@ -147,7 +147,7 @@ header{
 }
 
 #avt-config{
-	display: block;
+	display: none;
 }
 
 #avt-config::before{

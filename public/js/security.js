@@ -1,17 +1,15 @@
-const {
-    pbkdf2Sync
-  } = await import('node:crypto');
-  
-function encrypt(password) {
-    const key = pbkdf2Sync(password, 'salt', 100000, 64, 'sha512');
-    console.log(key.toString('hex')); 
+import bccrypt from 'bcrypt';
+
+function Generatehash(password){
+    const salt = bccrypt.genSaltSync(12);
+    const hash = bccrypt.hashSync(password,salt);
+    return hash;
 }
 
-function decrypt(password) {
-crypto.DEFAULT_ENCODING = 'hex';
-const key = crypto.pbkdf2Sync(password, 'salt', 100000, 512, 'sha512');
-console.log(key);  // '3745e48...aa39b34'
+function CompareHash(password, hash){
+    return bccrypt.compareSync(password,hash);
 }
 
-export default encrypt = encrypt;
-export {decrypt};
+
+export default {Generatehash, CompareHash};
+

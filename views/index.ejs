@@ -2,9 +2,9 @@
 <html>
 <head>
 	<title>Projeto 04</title>
-	<link href="../public/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="css/font-awesome.min.css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
-	<link href="../public/css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<script src="js/main.js"></script>
 	<meta charset="utf-8" />
 	<meta name="description" content="">
@@ -24,17 +24,16 @@
 
 			<div class="logo">
 				<h1>Henrique</h1>
-				<img id="img" src="../public/img/usuario.png">
+				<img id="img" onclick="myFunction()" src="img/usuario.png">
 			</div><!--logo-->
 
 			<div id="avt-config" class="avatar-config">
 				<div class="option-avatar">
-					<a href=""><i class="fa fa-power-off"></i>Sair</a>
+					<a href="http://localhost:3000/logout"><i class="fa fa-power-off"></i>Sair</a>
 				</div><!--option-avatar-->
 			</div><!--avatar-config-->
 
 			<script>
-					$('#img').click(
 							function myFunction() {
 								 var x = document.getElementById("avt-config");
 								 if (x.style.display === "block") {
@@ -43,7 +42,6 @@
 								x.style.display = "block";
 							}
 						}
-					)
 			</script>
 
 		</div><!--menu-->

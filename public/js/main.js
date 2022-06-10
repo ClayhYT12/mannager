@@ -73,10 +73,17 @@ fetch('http://localhost:3000/create/user', {
 
 function DeleteUser(senha,email){
 
-    fetch('http://localhost:3000/delete/user/'+email+'/'+senha+'').then(res => res.json())
-  .then(res => console.log(res));
-  setTimeout(()=>{
-    window.location.href = "http://localhost:3000";
-},5000);
+    fetch('http://localhost:3000/delete/user', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({email:email, senha:senha})
+      }).then(res => res.json())
+        .then(res => console.log(res));
+        setTimeout(()=>{
+          window.location.href = "http://localhost:3000";
+      },5000);
 }
 
