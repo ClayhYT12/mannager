@@ -4,6 +4,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import ejs from 'ejs';
+import session from 'express-session';
+
+
 
 class App{
 
@@ -11,6 +14,7 @@ class App{
         this.server = express();
         this.server.engine('ejs', ejs.renderFile);
         this.server.set('view engine', 'ejs');
+        this.server.use(session({secret:"jksdgjhgdsfjgdfsgdsfjfgdsjgfdsjhgfdjs"}));
         const __filename = fileURLToPath(import.meta.url);
         const __dirname = path.dirname(__filename);
         this.server.use(express.static(path.join(__dirname ,'public')));

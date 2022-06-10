@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projeto 04</title>
+	<link href="css/font-awesome.min.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<script src="js/main.js"></script>
+	<meta charset="utf-8" />
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+</head>
+<body>
+	<header>
+		<div class="menu">
+			<div class="notifications">
+				<a href=""><i class="fa fa-bell"></i></a>
+			</div><!--notification-->
+
+			<div class="mensagens">
+				<a href=""><i class="fa fa-envelope"></i></a>
+			</div><!--mensagens-->
+
+			<div class="logo">
+				<h1>Henrique</h1>
+				<img src="/img/usuario.png">
+			</div><!--logo-->
+		</div><!--menu-->
+	</header>
+
+
+	<section class="navbar-vertical">
+		<div class="service-logo">
+			<img src="/img/emoji.png">
+			<div class="service-wraper">
+				<h1>Instalead</h1>
+				<span>Painel de Licenças</span>
+			</div><!--service-wraper-->
+		</div><!--service-logo-->
+
+		<div class="clientes">
+			<a href=""><i class="fa fa-users"></i>Clientes</a>
+		</div><!--clientes-->
+
+		<div class="clientes-mobile">
+			<a href=""><i class="fa fa-users"></i></a>
+		</div><!--clientes-->
+
+		<div class="clientes-adm">
+			<a href=""><i class="fa fa-user"></i>Administração</a>
+		</div><!--clientes-adm-->
+
+		<div class="clientes-adm-mobile">
+			<a href=""><i class="fa fa-user"></i></a>
+		</div><!--clientes-adm-->
+
+		<div class="line-adm"></div>
+
+		<div class="interface"><span>Interface</span></div>
+
+		<div class="line-adm"></div>
+
+		<div class="arrow-left">
+			<img src="img/back.png">
+		</div><!--arrow-left-->
+
+		<div class="clear"></div>
+	</section><!--navbar-vertical-->
+
+	<section class="painel">
+		<div class="painel-wraper">
+			<div class="title-painel"><h1>Painel de Licenças</h1></div>
+
+			<div class="new-client">
+				<button id="btnClient" onclick="ShowBtn('client-user')">Novo Cliente</button>
+			</div><!--new-client-->
+
+
+
+			<div class="edit-info">
+
+
+						<p id="info">
+							<table border="1" cellspacing="0" id="lista">
+								<tbody>
+									<tr class="bold-td">
+										<td>Id</td>
+										<td>Email</td>
+										<td>Software</td>
+										<td>Validade</td>
+										<td>Hwid</td>
+										<td>Vendedor</td>
+										<td>Ações</td>
+									</tr>
+								</tbody>
+
+								
+								<% for(user of users){ %>
+									
+								<tr class="bold-tr">
+									<td><%= user.id %></td>
+									<td><%= user.email %></td>
+									<td><%= user.software %></td>
+									<td><%= user.validade %></td>
+									<td><%= user.hwid %></td>
+									<td><%= user.vendedor %></td>
+									<td><button class="edit" onclick="EditUser('edit-client','<%= user.id %>','<%= user.senha %>','<%= user.email %>','<%= user.software %>','<%= user.validade %>','<%= user.hwid %>','<%= user.vendedor %>')">Editar</button><button onclick="DeleteUser('<%= user.senha %>','<%= user.email %>')" class="delete">Excluir</button></td>	
+								</tr>								
+								<% } %>
+								
+							</table>
+						</p>
+					 	
+
+			</div><!--edit-info-->
+
+			<div class="register">
+				<span>Mostrando registros de 1 a 10 de um total de <%= users.length %> registros</span>
+				<% console.log("meu log" + users) %>
+			</div><!--register-->
+		</div><!--painel-wraper-->
+	</section><!--painel-->
+
+
+	<section class="client-user" id="client-user">
+		<div class="recent-client">
+			<div class="title-recent">
+				<h1>Novo Cliente</h1>
+				<button onclick="ShowBtn('client-user')">X</button>
+			</div><!--title-recent-->
+
+			<div class="email-client">
+				<span>E-mail:</span>
+				<input id="create-email-user" type="email" placeholder="">
+			</div><!--email-client-->
+
+			<div class="senha-client">
+				<span>Senha:</span>
+				<input id="create-pass-user" type="password" placeholder="">
+			</div><!--email-client-->
+
+			<div class="software-client">
+				<span>Selecione o Software:</span>
+				<form>
+				  <select  placeholder="" name="" id="create-sof-user">
+				    <option value="">Selecione o Sofware Abaixo:</option>
+				    <option value="A">A</option>
+				    <option value="B">B</option>
+				    <option value="C">C</option>
+				  </select>
+				</form>
+			</div><!--email-client-->
+
+			<div class="validade-client">
+				<span>Validade</span>
+				<input id="create-valid-user" type="date" placeholder="">
+			</div><!--validade-client-->
+
+			<div class="codigo-client">
+				<span>HWID:</span>
+				<input id="create-hwid-user" type="text" placeholder="">
+			</div><!--email-client-->
+
+
+			<div class="revenda-client">
+				<span>Revenda:</span>
+				<input id="create-vendedor-user" type="text" placeholder="Henrique">
+			</div><!--email-client-->
+
+			<div class="final">
+				<div class="cancel">
+					<button>Cancelar</button>
+				</div><!--cancel-->
+
+				<div class="licence">
+					<button onclick="CreateUser()">Gerar Licença</button>
+				</div><!--cancel-->
+			</div><!--finish-->
+
+		</div><!--recent-client-->
+
+		
+
+		<div class="clear"></div>
+	</section><!--client-user-->
+
+	<section class="edit-client" id="edit-client">
+		<div class="recent-client">
+			<div class="title-recent">
+				<h1>Edit Cliente</h1>
+				<button onclick="ShowBtn('edit-client')">X</button>
+			</div><!--title-recent-->
+
+			<div class="email-client">
+				<span>E-mail:</span>
+				<input id="edit-email-user" type="email" placeholder="" >
+			</div><!--email-client-->
+
+			<div class="senha-client">
+				<span>Senha:</span>
+				<input id="edit-pass-user" type="password" placeholder="">
+			</div><!--email-client-->
+
+			<div class="software-client">
+				<span>Selecione o Software:</span>
+				<form>
+				  <select placeholder="" name="" id="edit-sof-user">
+				    <option value="">Selecione o Sofware Abaixo:</option>
+				    <option value="A">A</option>
+				    <option value="B">B</option>
+				    <option value="C">C</option>
+				  </select>
+				</form>
+			</div><!--email-client-->
+
+			<div class="validade-client">
+				<span>Validade</span>
+				<input id="edit-valid-user" type="date" placeholder="">
+			</div><!--validade-client-->
+
+			<div class="codigo-client">
+				<span>HWID:</span>
+				<input id="edit-hwid-user" type="text" placeholder="">
+			</div><!--email-client-->
+
+
+			<div class="revenda-client">
+				<span>Revenda:</span>
+				<input id="edit-vendedor-user" type="text" placeholder="Henrique">
+			</div><!--email-client-->
+
+			<div class="final">
+				<div class="cancel">
+					<button>Cancelar</button>
+				</div><!--cancel-->
+
+				<div class="licence">
+					<button onclick="UpdateUser()">Atualizar</button>
+				</div><!--cancel-->
+			</div><!--finish-->
+
+		</div><!--recent-client-->
+
+		
+
+		<div class="clear"></div>
+	</section><!--client-user-->
+</body>
+</html>

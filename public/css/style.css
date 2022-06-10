@@ -20,6 +20,8 @@ tr {
 
 td{
 	border: 0.5px solid #5F5F5F;
+	overflow: auto;
+	font-weight: 100;
 }
 
 th {
@@ -27,7 +29,7 @@ th {
     vertical-align: inherit;
     font-weight: bold;
     text-align: -internal-center;
-	padding: 3px;
+	padding: 2px;
 	text-align: center;
 }
 
@@ -43,22 +45,20 @@ th {
 }
 
 .edit{
+	width: 100%;
 	cursor: pointer;
 	border: 0;
 	color: white;
-	border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px;
 	padding: 3px;
 	font-size: 11px;
 	background-color: #117DDA;
 }
 
 .delete{
+	width: 100%;
 	cursor: pointer;
 	border: 0;
 	padding: 3px;
-	border-top-right-radius: 4px;
-	border-bottom-right-radius: 4px;
 	font-size: 11px;
 	color: white;
 	background-color: #D81D1D;
@@ -333,6 +333,7 @@ section.painel{
 	height: 350px;
 	margin-bottom: 10px;
 	border: 2px solid #ccc;
+
 }
 
 .register{
@@ -406,6 +407,17 @@ section.painel{
 }
 
 section.client-user{
+	display: none;
+	width: 33%;
+	height: 90vh;
+	position: relative;
+	bottom: 530px;
+	left: 524px;
+	background-color: white;
+	border: 2px solid #ccc;
+}
+
+section.edit-client{
 	display: none;
 	width: 33%;
 	height: 90vh;
