@@ -132,6 +132,78 @@ header{
 	cursor: pointer;
 }
 
+
+.avatar-config{
+	padding-top: 2px;
+	width: 100px;
+	height: 50px;
+	background-color: white;
+	border: 1px solid #ccc;
+	position: absolute;
+	right: 50px; 
+	z-index: 999;
+	top: 74px;
+	right: 20px; 
+}
+
+#avt-config{
+	display: block;
+}
+
+#avt-config::before{
+	content:'';
+	height: 1px;
+	width: 1px;
+	border-top: 10px solid transparent; 
+	border-bottom: 10px solid transparent; 
+	position: absolute;
+	transform: rotate(270deg);
+	right: 7px;
+	top: -10px;
+	border-left: 20px solid white;
+}
+
+.avatar-title{
+	width: 100%;
+	height: 75px;
+	padding: 15px;
+	color: white;
+	background-color: #4285f4;
+}
+
+.avatar-title h1{
+	font-size: 17px;
+	font-weight: 400;
+}
+
+.avatar-title span{
+	font-size: 13px;
+	display: inline-block;
+}
+
+.option-avatar{
+	position: relative;
+	
+}
+
+.option-avatar i{
+	margin-right: 5px; 
+}
+
+.option-avatar a{
+	width: 100%;
+	padding: 10px 15px;
+	margin-top: 3px;
+	font-size: 14px;
+	display: block;
+	text-decoration: none;
+	color: #696969;
+}
+
+.option-avatar a:hover{
+	background-color: #F5F5F5;
+}
+
 section.navbar-vertical{
 	width: 15%;
 	height: 100vh;
