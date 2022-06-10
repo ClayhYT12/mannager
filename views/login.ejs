@@ -60,7 +60,7 @@
 			const senha = document.querySelector("#senha");
 			const senhavalue = senha.value;
 			const login = ()=>{
-				fetch('http://localhost:3000/', {
+				fetch('http://44.202.133.91/', {
 				method: 'POST',
 				headers: {
 					'Accept': 'application/json, text/plain, */*',
@@ -71,7 +71,7 @@
 			}
 			login();
 			setTimeout(function() {
-				window.location.href = "http://localhost:3000/";
+				window.location.href = "http://44.202.133.91/";
 			}, 5000);
 		})
 
