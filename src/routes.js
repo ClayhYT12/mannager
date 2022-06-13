@@ -58,17 +58,17 @@ async function GetUser(email,senha,req,res){
 
 }
 
-async function UpdateUser(email,senha,hwid,req,res ){
+async function UpdateUser(email,senha,hwid,software,req,res ){
     const passwordhash = await db.query("SELECT senha FROM personas WHERE email = '"+email+"'", { type: QueryTypes.SELECT });
     let confirm =  security.CompareHash(senha,passwordhash[0].senha)
     if (confirm === true) {
         try {
-            const user = await db.query("SELECT hwid FROM personas WHERE email = '"+email+"'", { type: QueryTypes.SELECT });
+            const user = await db.query("SELECT hwid FROM personas WHERE email = '"+email+"' AND software = '"+software+"'", { type: QueryTypes.SELECT });
             console.log(user[0].hwid);
             if(user[0].hwid != ''){
                 res.json({"response":"Este campo já existe"});
             }else{
-                const update = await db.query("UPDATE personas SET hwid = '"+hwid+"' WHERE email = '"+email+"'", { type: QueryTypes.UPDATE });
+                const update = await db.query("UPDATE personas SET hwid = '"+hwid+"' WHERE email = '"+email+"' AND software = '"+software+"'", { type: QueryTypes.UPDATE });
                 const userupdated = await db.query("SELECT * FROM personas WHERE email = '"+email+"'", { type: QueryTypes.SELECT });
                 res.json(userupdated);
             }
@@ -222,12 +222,13 @@ routes.get('/list/user',(req,res)=>{
     res.json({"erro":"não permitido"})
 })
 
-routes.get('/update/user/:email/:senha/:hwid',(req,res)=>{
+routes.get('/update/user/:email/:senha/:hwid/:software',(req,res)=>{
     //nombre,email,software,validade,hwid,vendedor
     let { senha } = req.params;
     let { email } = req.params;
     let { hwid } = req.params;
-    UpdateUser(email,senha,hwid,req,res);
+    let { software } = req.params;
+    UpdateUser(email,senha,hwid,software,req,res);
 })
 
 routes.post('/delete/user',(req,res)=>{
