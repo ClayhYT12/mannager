@@ -33,7 +33,7 @@ function UpdateUser(){
     let validade = document.getElementById('edit-valid-user').value;
     let hwid = document.getElementById('edit-hwid-user').value;
     let vendedor = document.getElementById('edit-vendedor-user').value;
-    fetch('http://44.202.133.91/updateall/user', {
+    fetch('http://207.180.236.209updateall/user', {
     method: 'POST',
     headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -43,7 +43,7 @@ function UpdateUser(){
     }).then(res => res.json())
     .then(res => console.log(res));
     setTimeout(()=>{
-        window.location.href = "http://44.202.133.91/";
+        window.location.href = "http://207.180.236.209/";
     },5000);
 }
 
@@ -56,7 +56,7 @@ function CreateUser(){
     let hwid = document.getElementById('create-hwid-user').value;
     let vendedor = document.getElementById('create-vendedor-user').value;
     console.log(opcaoValor);
-fetch('http://44.202.133.91/create/user', {
+fetch('http://207.180.236.209/create/user', {
   method: 'POST',
   headers: {
     'Accept': 'application/json, text/plain, */*',
@@ -66,14 +66,14 @@ fetch('http://44.202.133.91/create/user', {
 }).then(res => res.json())
   .then(res => console.log(res));
   setTimeout(()=>{
-    window.location.href = "http://44.202.133.91/";
+    window.location.href = "http://207.180.236.209/";
 },5000);
 
 }
 
 function DeleteUser(senha,email){
 
-    fetch('http://44.202.133.91/delete/user', {
+    fetch('http://207.180.236.209/delete/user', {
         method: 'POST',
         headers: {
           'Accept': 'application/json, text/plain, */*',
@@ -83,7 +83,7 @@ function DeleteUser(senha,email){
       }).then(res => res.json())
         .then(res => console.log(res));
         setTimeout(()=>{
-          window.location.href = "http://44.202.133.91/";
+          window.location.href = "http://207.180.236.209/";
       },5000);
 }
 
