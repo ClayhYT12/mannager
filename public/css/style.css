@@ -113,6 +113,11 @@ header{
 	display: inline-block;
 }
 
+.logo-form img{
+	height: 85px;
+	margin-top: 10px;
+}
+
 
 .logo h1{
 	display: inline-block;
